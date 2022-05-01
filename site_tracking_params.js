@@ -133,6 +133,17 @@ window.document.addEventListener("DOMContentLoaded", function(event) {
                 channel = 'Social';
                 medium = 'Facebook - Feed'
             }
+        } else if (referrer.includes('linkedin.com') || referrer.includes('medium=LinkedIn')) {
+            click_id = getParameterByName('cid ');
+            if (referrer.includes('linkedin.com') && click_id !== null) {
+                // ads
+                channel = 'Paid';
+                medium = 'LinkedIn - Ads';
+            } else {
+                // ads
+                channel = 'Social';
+                medium = 'LinkedIn - Feed';
+            }
         } else if (referrer.includes('youtube.com') || referrer.includes('medium=Youtube')) {
             click_id = getParameterByName('gclid');
             if (click_id !== '' && click_id !== null) {
