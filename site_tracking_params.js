@@ -45,7 +45,7 @@ function addParameter(url, parameterName, parameterValue, atStart/*Add param bef
     }
     return urlParts[0] + newQueryString + urlhash;
 }
-window.document.addEventListener("DOMContentLoaded", function(event) {
+window.addEventListener("load", function(event) {
     var referrer = document.referrer;
     var channel = getParameterByName("channel");
     var param_channel = channel;
