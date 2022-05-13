@@ -312,12 +312,21 @@ window.addEventListener("message", function(event) {
         for (var i = 0; i < all_forms_on_page.length; i++) {
             if(site !== undefined && site !== ''){
                 all_forms_on_page[i].querySelector('input[name="last_touch___site"]').value = site;
+                console.log("Site: " + site);
+            } else{
+                console.log("No site");
             }
             if(medium !== undefined && medium !== ''){
                 all_forms_on_page[i].querySelector('input[name="last_touch_medium"]').value = medium;
+                console.log("Medium: " + medium);
+            } else{
+                console.log("No Medium");
             }
             if(channel !== undefined && channel !== ''){
                 all_forms_on_page[i].querySelector('input[name="last_touch_channel_new"]').value = channel;
+                console.log("Channel: " + channel);
+            } else{
+                console.log("No channel");
             }
 
         }
