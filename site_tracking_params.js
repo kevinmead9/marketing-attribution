@@ -304,25 +304,22 @@ window.addEventListener("message", function(event) {
                 site = 'FWD'
             }
         }
-        if (typeof site === 'undefined' || site === null) {
-            site = getParameterByName("site");
-        }
 
         var all_forms_on_page = document.getElementsByClassName("hs-form");
         for (var i = 0; i < all_forms_on_page.length; i++) {
-            if(site !== undefined && site !== ''){
+            if(site !== undefined && site !== '' && site !== null){
                 all_forms_on_page[i].querySelector('input[name="last_touch___site"]').value = site;
                 console.log("Site: " + site);
             } else{
                 console.log("No site");
             }
-            if(medium !== undefined && medium !== ''){
+            if(medium !== undefined && medium !== '' && medium !== null){
                 all_forms_on_page[i].querySelector('input[name="last_touch_medium"]').value = medium;
                 console.log("Medium: " + medium);
             } else{
                 console.log("No Medium");
             }
-            if(channel !== undefined && channel !== ''){
+            if(channel !== undefined && channel !== '' && channel !== null){
                 all_forms_on_page[i].querySelector('input[name="last_touch_channel_new"]').value = channel;
                 console.log("Channel: " + channel);
             } else{
