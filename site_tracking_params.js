@@ -316,7 +316,7 @@ window.addEventListener("message", function(event) {
             if(medium !== undefined && medium !== ''){
                 all_forms_on_page[i].querySelector('input[name="last_touch_medium"]').value = medium;
             }
-            if(channel !== undefined && medium !== ''){
+            if(channel !== undefined && channel !== ''){
                 all_forms_on_page[i].querySelector('input[name="last_touch_channel_new"]').value = channel;
             }
 
